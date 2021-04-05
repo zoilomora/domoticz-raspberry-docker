@@ -34,7 +34,8 @@ Login from our main computer for your future convenience and next steps with the
 For example: `ssh pi@192.168.0.100`.
 
 ## Software installation
-Run the `curl -sS environment.sh | bash` command once logged into the Raspberry Pi.
+Run the `curl -sS https://raw.githubusercontent.com/zoilomora/domoticz-raspberry-docker/main/environment.sh | bash`
+command once logged into the Raspberry Pi.
 
 It will ask you to enter the password (if you haven't changed it) `raspberry`.
 
@@ -42,7 +43,8 @@ Wait for the installation script to finish.
 
 Now we reboot the system with the `sudo reboot` command.
 
-Run the `curl -sS services.sh | bash` command once logged into the Raspberry Pi.
+Run the `curl -sS https://raw.githubusercontent.com/zoilomora/domoticz-raspberry-docker/main/services.sh | bash`
+command once logged into the Raspberry Pi.
 
 **Domoticz takes a while to start the first time, it has to generate the DH parameters**.
 
