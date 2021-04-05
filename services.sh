@@ -103,7 +103,7 @@ services:
 
 EOF
 mkdir config
-docker run -it --rm -u root:root -v "$(pwd)"/config:/tmp/config eclipse-mosquitto:2.0.10 sh -c "cp /mosquitto/config/mosquitto.conf /tmp/config/mosquitto.conf && chown 1000:1000 /tmp/config/mosquitto.conf"
+docker run --rm -u root:root -v "$(pwd)"/config:/tmp/config eclipse-mosquitto:2.0.10 sh -c "cp /mosquitto/config/mosquitto.conf /tmp/config/mosquitto.conf && chown 1000:1000 /tmp/config/mosquitto.conf"
 sudo sed -i "s/#listener/listener 1883/g" ./config/mosquitto.conf
 sudo sed -i "s/#allow_anonymous false/allow_anonymous true/g" ./config/mosquitto.conf
 docker-compose up -d

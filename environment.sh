@@ -39,7 +39,7 @@ echo "################################################################"
 echo
 
 if ! location=$(type -p "git"); then
-  	sudo apt install -y git
+    sudo apt install -y git
 fi
 
 echo
@@ -49,7 +49,7 @@ echo "################################################################"
 echo
 
 if ! location=$(type -p "screenfetch"); then
-  	sudo apt install -y screenfetch
+    sudo apt install -y screenfetch
 fi
 
 echo
