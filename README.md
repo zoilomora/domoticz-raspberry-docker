@@ -25,7 +25,7 @@ First we run the `sudo raspi-config` command and the configuration menu will app
 - **Set WLAN Country:** Go to option `5` and `L4`. I have selected `ES Spain`.
 - **Expand Filesystem:** Go to option `6` and `A1`.
 
-Now we reboot the system with the `sudo reboot` command.
+When finished click on `Finish` and it will ask if you would like to rebbot now. `Yes` selection.
 
 Login again and see the **IP address** assigned by DHCP with the `ifconfig` command.
 It is advisable to configure a **static ip** in our Router.
@@ -34,13 +34,17 @@ Login from our main computer for your future convenience and next steps with the
 For example: `ssh pi@192.168.0.100`.
 
 ## Software installation
-Run the `... todo-install.sh ...` command once logged into the Raspberry Pi.
+Run the `curl -sS environment.sh | bash` command once logged into the Raspberry Pi.
 
 It will ask you to enter the password (if you haven't changed it) `raspberry`.
 
 Wait for the installation script to finish.
 
 Now we reboot the system with the `sudo reboot` command.
+
+Run the `curl -sS services.sh | bash` command once logged into the Raspberry Pi.
+
+**Domoticz takes a while to start the first time, it has to generate the DH parameters**.
 
 ## Enjoy
 System ready!
@@ -73,4 +77,3 @@ Read [LICENSE] for more information
 
 [Apache-2.0]: https://opensource.org/licenses/Apache-2.0
 [LICENSE]: LICENSE
-
