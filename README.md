@@ -65,6 +65,10 @@ A folder will have been created in `~/docker` with all the necessary `docker-com
 
 I recommend finding out about **Domoticz**, **MQTT** and **Node-RED** to configure the software to your liking.
 
+## Board tested
+- [Raspberry PI 3 B+] with **Raspberry Pi OS** version [2021-03-04].
+- [Odroid XU4] (donated by [DrBoom]) with **Debian Buster** and **Ubuntu Focal**.
+
 ## License
 Licensed under the [Apache-2.0]
 
@@ -80,6 +84,11 @@ Read [LICENSE] for more information
 [2021-03-04]: https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-03-25/2021-03-04-raspios-buster-armhf-lite.zip
 [Etcher]: https://www.balena.io/etcher/
 [default username and password]: https://www.raspberrypi.org/documentation/linux/usage/users.md
+
+[Raspberry PI 3 B+]: https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/
+[Odroid XU4]: https://wiki.odroid.com/odroid-xu4/odroid-xu4
+
+[DrBoom]: https://t.me/DrBoom80
 
 [Apache-2.0]: https://opensource.org/licenses/Apache-2.0
 [LICENSE]: LICENSE

@@ -15,6 +15,32 @@ cd ~/docker
 
 echo
 echo "################################################################"
+echo "  AutoHeal                                                      "
+echo "################################################################"
+echo
+
+mkdir autoheal
+cd autoheal
+tee ./docker-compose.yml << EOF
+version: '3.8'
+
+services:
+  autoheal:
+    image: willfarrell/autoheal
+    container_name: autoheal
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+EOF
+docker-compose up -d
+cd ~/docker
+
+
+echo
+echo "################################################################"
 echo "  Domoticz                                                      "
 echo "################################################################"
 echo
@@ -26,7 +52,7 @@ version: '3.8'
 
 services:
   domoticz:
-    image: linuxserver/domoticz:stable-version-2020.2
+    image: zoilomora/domoticz:2020.2.13182-beta
     container_name: domoticz
     environment:
       - PUID=1000
@@ -38,6 +64,12 @@ services:
       - 8080:8080
       - 6144:6144
       - 1443:1443
+    healthcheck:
+      test: 'curl -f "http://localhost:8080/json.htm?type=command&param=getversion" | grep "status" || exit 1'
+      interval: 30s
+      timeout: 15s
+      retries: 2
+      start_period: 30m
     restart: unless-stopped
 
 EOF
