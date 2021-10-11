@@ -19,7 +19,7 @@ us to log in. The [default username and password] are `pi` and `raspberry` respe
 There are a number of Raspberry Pi specific settings that we would have to adjust:
 
 First we run the `sudo raspi-config` command and the configuration menu will appear.
-- **Cconnect to your WLAN (if you connect via WIFI):** Go to option `1` and `S1`.
+- **Connect to your WLAN (if you connect via WIFI):** Go to option `1` and `S1`.
 - **Enable SSH server:** Go to option `3` and `P2`.
 - **Regional and language settings:** Go to option `5` and `L1`. I have selected `es_ES.UTF-8 UTF-8`.
 - **Set Timezone:** Go to option `5` and `L2`. I have selected `Europe` and `Madrid`.
